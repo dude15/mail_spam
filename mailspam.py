@@ -4,9 +4,11 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import random
 from termcolor import colored
+import os
 global stroka
 stroka = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789!@#$%^&*"
 
+os.system("clear")
 
 print(colored("---Mail spam v 0.1---","red",attrs=['bold']))
 print(colored("---Maded by Didenko Aleksandr---","red",attrs=['bold']))
