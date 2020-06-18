@@ -5,6 +5,7 @@ from email.mime.multipart import MIMEMultipart
 import random
 from termcolor import colored
 import os
+import getpass
 global stroka
 stroka = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789!@#$%^&*"
 
@@ -17,7 +18,7 @@ print(colored("---Maded by Didenko Aleksandr---","red",attrs=['bold']))
 def send_mail():
     #requests all variables from the user
     login = str(input(colored("Your email: ","green")))
-    password = str(input(colored("Your password: ","green")))
+    password = str(getpass.getpass((colored("Your password: ","green"))))
     url = str(input(colored("URL: ","green")))
     whom = str(input(colored("Whom: ","green")))
     message = str(input(colored("Text: ","green")))
