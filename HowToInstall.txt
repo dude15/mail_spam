@@ -1,0 +1,9 @@
+git clone https://github.com/dude15/mail_spam.git
+
+cd mail_spam
+
+pip3 install -r requirements.py
+
+chmod +x mailspam.py
+
+python mailspam.py   <--- start
