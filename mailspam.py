@@ -17,12 +17,12 @@ print(colored("---Maded by Didenko Aleksandr---","red",attrs=['bold']))
 
 def send_mail():
     #requests all variables from the user
-    login = str(input(colored("Your email: ","green")))
-    password = str(getpass.getpass((colored("Your password: ","green"))))
-    url = str(input(colored("URL: ","green")))
-    whom = str(input(colored("Whom: ","green")))
-    message = str(input(colored("Text: ","green")))
-    number = int(input(colored("How many messages: ","green")))
+    login = str(input(colored("Your email: ","green",attrs=['bold'])))
+    password = str(getpass.getpass((colored("Your password: ","green",attrs=['bold']))))
+    url = str(input(colored("URL: ","green",attrs=['bold'])))
+    whom = str(input(colored("Target email: ","green",attrs=['bold'])))
+    message = str(input(colored("Text: ","green",attrs=['bold'])))
+    number = int(input(colored("How many messages: ","green",attrs=['bold'])))
 
     #main cycle
 
@@ -48,14 +48,22 @@ def send_mail():
         server.sendmail(login, whom, msg.as_string() )
 
         x += 1
-        print(colored(f"[+] Sended {str(x)} messages","red",attrs=['bold']))
+        print(colored(f"[+] Sended {str(x)} messages","cyan"))
 
 #for comfortable makes new func
 
 def spam():
     send_mail()
 
-#start spam,enjoy :)))
+#start spam and some exceptions,enjoy :)))
 
 if __name__ == '__main__':
-    spam()
+    try:
+        spam()
+    except smtplib.SMTPAuthenticationError:
+        print(colored("[ERROR] Login or password are incorrect","red",attrs=['bold']))
+    except smtplib.SMTPConnectError:
+        print(colored("[ERROR] Connection error","red",attrs=['bold']))
+    except smtplib.SMTPServerDisconnected:
+        print(colored("[ERROR] Connection unexpectedly closed","red",attrs=['bold']))
+    
