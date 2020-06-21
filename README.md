@@ -9,7 +9,7 @@ Your password: put there password from ur email
 
 URL: put there smtp protocol of your email(for example,if you have gmail,you must write "smtp.gmail.com")
 
-Whom: write attacked mail here
+Target email: write target email here
 
 Text: write the text of the message
 
