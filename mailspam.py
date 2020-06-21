@@ -11,7 +11,7 @@ stroka = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789!@#$%^&*"
 
 os.system("clear")
 
-print(colored("---Mail spam v 0.1---","red",attrs=['bold']))
+print(colored("---Mail spam---","red",attrs=['bold']))
 print(colored("---Maded by Didenko Aleksandr---","red",attrs=['bold']))
 #func that spam messages
 
@@ -66,4 +66,6 @@ if __name__ == '__main__':
         print(colored("[ERROR] Connection error","red",attrs=['bold']))
     except smtplib.SMTPServerDisconnected:
         print(colored("[ERROR] Connection unexpectedly closed","red",attrs=['bold']))
+    except ValueError:
+        print(colored("[ERROR] Please put number,not a string","red",attrs=['bold']))
     
