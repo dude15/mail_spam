@@ -1,5 +1,5 @@
 # mail_spam
-small python script to spam your email.Dont use illegal :))
+Small python script to spam your email.Dont use illegal :))
 
 how to use:
 
@@ -17,4 +17,5 @@ How many messages: count of messages
 
 
 P.S. At first you must allow access to unknown applications
+
 P.S.S Sorry for my bad english :)
