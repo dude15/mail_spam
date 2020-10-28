@@ -50,16 +50,11 @@ def send_mail():
         x += 1
         print(colored(f"[+] Sended {str(x)} messages","cyan"))
 
-#for comfortable makes new func
-
-def spam():
-    send_mail()
-
 #start spam and some exceptions,enjoy :)))
 
 if __name__ == '__main__':
     try:
-        spam()
+        send_mail()
     except smtplib.SMTPAuthenticationError:
         print(colored("[ERROR] Login or password are incorrect","red",attrs=['bold']))
     except smtplib.SMTPConnectError:
